@@ -1,4 +1,10 @@
-Install-ChocolateyZipPackage 'etherpad-lite' 'http://github.com/ether/etherpad-lite/archive/1.2.91.zip' "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$epVersion="1.2.91"
 
-echo "cd $(Split-Path -parent $MyInvocation.MyCommand.Definition)\etherpad-lite-1.2.1
+Install-ChocolateyZipPackage 'etherpad-lite' "http://github.com/ether/etherpad-lite/archive/$epVersion.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+pushd "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\etherpad-lite-$epVersion"
+bin\installOnWindows
+popd
+
+echo "cd $(Split-Path -parent $MyInvocation.MyCommand.Definition)\etherpad-lite-$epVersion
 call start.bat" | set-content "$env:chocolateyinstall\bin\etherpad-lite.bat"
