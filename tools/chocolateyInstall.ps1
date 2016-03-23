@@ -1,4 +1,4 @@
-$epVersion="1.2.91"
+$epVersion="1.5.7"
 
 Install-ChocolateyZipPackage 'etherpad-lite' "http://github.com/ether/etherpad-lite/archive/$epVersion.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 

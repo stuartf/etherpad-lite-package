@@ -3,7 +3,7 @@
   <metadata>
     <id>etherpad-lite</id>
     <title>Etherpad Lite</title>
-    <version>1.2.91.20130523</version>
+    <version>1.5.7</version>
     <authors>https://github.com/ether/etherpad-lite/contributors</authors>
     <owners>D. Stuart Freeman</owners>
     <summary>A really-real time collaborative word processor for the web</summary>
